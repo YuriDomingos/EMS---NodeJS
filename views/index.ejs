@@ -1,0 +1,44 @@
+
+
+
+<!-- Incluir o header -->
+
+<%- include('includes/_header')%>
+
+<main id="site-man">
+    .
+    <div class="container">
+        <div class="box-nav d-flex justify-between"></div>
+        <a href="/add-user" class="border-shadow">
+        <span class="text-gradient"> New User <i class="fas fa-users"></i></span>
+        </a>
+
+        <!-- Ficheiro que vai introduzir dados e estilo no formulário-->
+
+        <form action="/" method="POST">
+        
+            <table class="table ">
+                 <thead class="thead-dark"> 
+                <tr>
+                    <th> ID </th>
+                    <th> Name </th>
+                    <th> @Email</th>
+                    <th> Gender </th>
+                    <th> Status </th>
+                    <th> Action </th>
+                </tr>
+            </thead>
+              <tbody>
+
+                <%- include('includes/_show')%>
+              </tbody>
+
+            </table>
+
+        
+        </form>
+    </div>
+</main>
+
+<!-- Include footer (just to put inside of the text)-->
+<%- include('includes/_footer')%>

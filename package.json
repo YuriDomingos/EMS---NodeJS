@@ -1,0 +1,28 @@
+{
+  "name": "manage-systems",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuriDomingos/EMS---NodeJS.git"
+  },
+  "author": "Yuri Domingos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuriDomingos/EMS---NodeJS/issues"
+  },
+  "homepage": "https://github.com/YuriDomingos/EMS---NodeJS#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12"
+  }
+}
