@@ -2,13 +2,14 @@
 
  
                <tbody>
-
+             <% for( var contador = 0; contador < users.length; contador++) {%>
                 <tr>
-                    <td> 1 </td>
-                    <td> username </td>
-                    <td> exempla@gmail.com</td>
-                    <td> male</td>
-                    <td> active </td>
+                    <td> <%= contador+1 %></td>
+                    <td> <%= users[contador].name %> </td>
+                    <td> <%= users[contador].email %> </td>
+                    
+                    <td><%= users[contador].gender %></td>
+                    <td> <%= users[contador].status %> </td>
 
                     <td>
                         <a href="/update-user" class="btn border-shadow update"> 
@@ -20,4 +21,6 @@
 
                     </td>
                 </tr>
+
+                <%} %>
                </tbody>

@@ -4,7 +4,7 @@
  Objectivo : Construir um sistema para estar preparado para o mercado de trabalho
 */
 
-// os imports
+// os    https://neurolideranca.prorumus.com/
 
 
 const express = require('express');
@@ -12,9 +12,15 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const path = require('path');
+
+const connectDB = require('./Server/database/connection');
 // referência para os arquivos estaticos
 const PORT = process.env.PORT || 8080;
 const application = express();
+
+/*
+
+*/
 application.use(bodyparser.urlencoded({extended:true}));
 
 // set view engine
@@ -22,10 +28,14 @@ application.set("view engine", "ejs");
 application.use('/css', express.static(path.resolve(__dirname,'assets/css')));
 application.use('/js', express.static(path.resolve(__dirname, 'assets/js')));
 
+
 dotenv.config({ path:'config.env'});
 
 // log requests  
 application.use(morgan('tiny'));
+
+// Databe connection to our application 
+connectDB();
 
 // load systems routes 
 application.use('/', require('./Server/Routes/router'));
