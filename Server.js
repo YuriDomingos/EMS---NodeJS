@@ -1,10 +1,10 @@
 /*
  @Autor : Yuri Domingos
  Data   : 19 - 10 - 2021
- Objectivo : Construir um sistema para estar preparado para o mercado de trabalho
+ Objectivo : Construir um sistema 
 */
 
-// os    https://neurolideranca.prorumus.com/
+// 
 
 
 const express = require('express');
